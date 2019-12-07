@@ -94,7 +94,7 @@ export default class OAuth {
 			.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
 			.join('&');
 
-		const URL = `https://${domain}/oauth2/authorize?${queryString}`;
+		const URL = `https://${domain}/login?${queryString}`;
 		logger.debug(`Redirecting to ${URL}`);
 		this._urlOpener(URL, redirectSignIn);
 	}
